@@ -1,5 +1,5 @@
 
-@media (min-width: 310px) and (max-width: 419.99px) {
+@media (max-width: 419.99px) {
   .carousel-item img {
     max-width: 300px;
   }
