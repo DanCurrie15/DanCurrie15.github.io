@@ -1,0 +1,149 @@
+/*
+ *
+ * Colurs
+ *
+ */
+ :root {
+   --colour-one: purple;
+   --colour-two: darkgreen;
+   --colour-three: #ffccff;
+   --colour-four: #ffe6ff;
+ }
+
+header, footer, main {
+  display: block;
+}
+
+a {
+  color: var(--colour-one);
+}
+a:hover {
+  color: var(--colour-two);
+}
+
+/*
+ *
+ * Header
+ *
+ */
+
+header .jumbotron {
+  background-color: var(--colour-one);
+  margin-bottom: 0;
+}
+
+header h1 {
+  color: white;
+  font-size: 3em;
+}
+
+header p {
+  color: white;
+}
+
+/*
+ *
+ * Main
+ *
+ */
+
+ main .container-fluid {
+    padding: 0;
+ }
+
+ .card-body {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--colour-four);
+ }
+
+ .card-header h2 {
+   display: inline-block;
+   margin: 0 0 0 10px;
+   vertical-align: middle;
+ }
+
+ .carousel {
+   margin-left: auto;
+   margin-right: auto;
+   width: auto;
+ }
+
+ .carousel-item img {
+   height: auto;
+   max-height: 400px;
+   width: auto;
+   max-width: 800px;
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+ .my-caption {
+   text-align: center;
+   max-width: 800px;
+ }
+
+ .my-caption h3 {
+   color: var(--colour-one);
+ }
+
+ .mechEngDetail {
+   text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+ .feature-work {
+   width: 300px;
+   height: auto;
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+ .feature-work a {
+   align-items: center;
+   text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+ .feature-work p {
+   text-align: justify;
+ }
+
+ .feature-image {
+   width: 250px;
+   height: 250px;
+ }
+
+/*
+ *
+ * Footer
+ *
+ */
+footer .jumbotron {
+  background-color: var(--colour-three);
+}
+
+footer p {
+   text-align:center;
+   font-size:1em;
+   font-weight:400;
+   margin:0;
+   padding:1.5em 0 0
+}
+
+footer .footer-list {
+  overflow:hidden;
+  margin:0 auto;
+  padding:0;
+  text-align: center;
+}
+
+footer .footer-list li {
+  width:33%;
+  padding-top:1em;
+  padding-bottom:1em;
+  display:block;
+  float:left;
+}

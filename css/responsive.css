@@ -1,0 +1,12 @@
+
+@media (max-width: 574.99px) {
+  .carousel-item img {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 575) and (max-width: 766px) {
+  .carousel-item img {
+    max-width: 560px;
+  }
+}
