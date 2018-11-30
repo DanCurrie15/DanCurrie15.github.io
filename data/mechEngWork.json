@@ -52,5 +52,11 @@
     "image": "slide_sensors.png",
     "title": "Sensors Array for Slide",
     "desc": "While at RMA, I designed a touch panel that sits at the slide entrance and a sensor array that sits ontop of the slide to detect when a person slides past"
+  },
+  {
+    "carouselItemClass": "carousel-item",
+    "image": "industrialfan.png",
+    "title": "Industrial Centrifugal Fan",
+    "desc": "One of many fans I designed at Daltec Process Fans"
   }
 ]
