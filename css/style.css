@@ -14,12 +14,31 @@ header, footer, main {
   display: block;
 }
 
+html, body {
+  width:  100%;
+  height: 100%;
+  margin: 0;
+}
+
 a {
   color: var(--colour-one);
 }
 a:hover {
   color: var(--colour-two);
 }
+
+/*
+ *
+ * Canvas
+ *
+ */
+
+ canvas {
+   width: 100vw;
+   height: 100vh;
+   display: block;
+   visibility: hidden;
+ }
 
 /*
  *
