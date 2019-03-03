@@ -131,7 +131,8 @@ header p {
  }
 
  .feature-image {
-   width: 250px;
+   max-width: 275px;
+   width: auto;
    height: 250px;
  }
 

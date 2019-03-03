@@ -164,20 +164,24 @@ function createPlayer() {
     ctx.restore();
   }
   this.rotatePlayer = function(e) {
-    let pointerEvent = e;
-    //let rect = canvas.getBoundingClientRect();
-    if (e.targetTouches && e.targetTouches[0]) {
-      e.preventDefault();
-      pointerEvent = e.targetTouches[0];
-      mouseX = pointerEvent.pageX;// - rect.left;
-      mouseY = pointerEvent.pageY;// - rect.top;
-    } else {
-      mouseX = e.clientX;// - rect.left;
-      mouseY = e.clientY;// - rect.top;
-    }
+    let rect = canvas.getBoundingClientRect();
     let imageX = canvas.width * 0.5;
     let imageY = canvas.height - 37.5;
-    player.angle = (Math.atan2(mouseY - imageY, mouseX - imageX)) + Math.PI/2;
+    if (e.targetTouches && e.targetTouches[0]) {
+      e.preventDefault();
+      mouseX = e.targetTouches[0].clientX - rect.left;
+      mouseY = e.targetTouches[0].clientY - rect.top;
+      var mouseEvent = new MouseEvent("mousemove", {
+        clientX: touch.clientX,
+        clientY: touch.clientY
+      });
+      document.dispatchEvent(mouseEvent);
+      //player.angle = (Math.atan2(mouseY - imageY, mouseX - imageX)) + Math.PI/2;
+    } else {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      player.angle = (Math.atan2(mouseY - imageY, mouseX - imageX)) + Math.PI/2;
+    }
   }
 }
 
