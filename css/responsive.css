@@ -1,18 +1,33 @@
 
 @media (max-width: 419.99px) {
-  .carousel-item img {
+  .carousel-item img, .my-caption {
     max-width: 300px;
   }
+  .carousel-control-prev, .carousel-control-next {
+    max-height: 150px;
+  }
+  .card-link h2 {
+    font-size: 1.6rem;
+  }
+
 }
 
 @media (min-width: 420px) and (max-width: 574.99px) {
-  .carousel-item img {
+  .carousel-item img, .my-caption {
     max-width: 410px;
   }
+  .carousel-control-prev, .carousel-control-next {
+    max-height: 205px;
+  }
+
+
 }
 
 @media (min-width: 575px) and (max-width: 766px) {
-  .carousel-item img {
+  .carousel-item img, .my-caption {
     max-width: 565px;
+  }
+  .carousel-control-prev, .carousel-control-next {
+    max-height: 283px;
   }
 }

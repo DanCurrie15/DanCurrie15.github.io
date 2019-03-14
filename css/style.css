@@ -88,6 +88,10 @@ header p {
    width: auto;
  }
 
+ .carousel-control-prev, .carousel-control-next  {
+   max-height: 400px;
+ }
+
  .carousel-item img {
    height: auto;
    max-height: 400px;

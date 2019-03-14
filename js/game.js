@@ -72,6 +72,10 @@ var gameArea = {
     this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
   },
   score: function() {
+    this.context.globalAlpha = 0.9;
+    this.context.fillStyle = "grey";
+    this.context.fillRect(15, 40, 95, 26);
+    this.context.globalAlpha = 1.0;
     this.context.font = "20px Arial";
     this.context.fillStyle = "white";
     this.context.fillText("Score: " + score, 20,60);
