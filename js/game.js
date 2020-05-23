@@ -44,7 +44,6 @@ function endGame() {
   allMissles = [];
   allExplosions = [];
   score = 0;
-
 }
 
 // game objects
@@ -74,11 +73,11 @@ var gameArea = {
   score: function() {
     this.context.globalAlpha = 0.9;
     this.context.fillStyle = "grey";
-    this.context.fillRect(15, 40, 95, 26);
+    this.context.fillRect(25, 100, 130, 36);
     this.context.globalAlpha = 1.0;
-    this.context.font = "20px Arial";
+    this.context.font = "30px Arial";
     this.context.fillStyle = "white";
-    this.context.fillText("Score: " + score, 20,60);
+    this.context.fillText("Score: " + score, 30,128);
   },
   end: function () {
     canvas.style.visibility = "hidden";
@@ -169,9 +168,9 @@ function createPlayer() {
   }
   this.rotatePlayer = function(e) {
     let rect = canvas.getBoundingClientRect();
-    let imageX = canvas.width * 0.5;
-    let imageY = canvas.height - 37.5;
-    if (e.targetTouches && e.targetTouches[0]) {
+    let imageX = (rect.width * 0.5);
+    let imageY = (rect.height - 37.5);
+    /*if (e.targetTouches && e.targetTouches[0]) {
       e.preventDefault();
       mouseX = e.targetTouches[0].clientX - rect.left;
       mouseY = e.targetTouches[0].clientY - rect.top;
@@ -181,11 +180,16 @@ function createPlayer() {
       });
       document.dispatchEvent(mouseEvent);
       //player.angle = (Math.atan2(mouseY - imageY, mouseX - imageX)) + Math.PI/2;
-    } else {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-      player.angle = (Math.atan2(mouseY - imageY, mouseX - imageX)) + Math.PI/2;
-    }
+    } else {*/
+      //mouseX = e.clientX;
+      //mouseY = e.clientY;
+    console.log("mouseX: " + e.clientX + " imageX: " + imageX);
+    console.log("mouseY: " + e.clientY + " imageY: " + imageY);
+    var newAngle = (Math.atan2(imageX - e.clientX, imageY - e.clientY)) * -1;
+
+    console.log(newAngle);
+    player.angle = newAngle;
+    //}
   }
 }
 
